@@ -1,0 +1,15 @@
+knife4j:
+  enable: false
+  openapi:
+    title: 学校项目文档
+    description: "智慧图书系统，接口文档"
+    email: p-711296@qq.com
+    concat: 小玲           #联系人
+#    version: v4.0
+#    license: Apache 2.0
+    group:
+      test1:
+        group-name: 分组名称
+        api-rule: package
+        api-rule-resources:
+          - com.example.controller

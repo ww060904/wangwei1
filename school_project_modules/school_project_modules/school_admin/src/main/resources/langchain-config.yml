@@ -1,0 +1,9 @@
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        api-key: sk-a591bc4188b74c61a32757bd44d656a5
+        model-name: qwen-plus
+      streaming-chat-model:
+        api-key: sk-a591bc4188b74c61a32757bd44d656a5
+        model-name: qwq-32b

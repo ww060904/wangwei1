@@ -1,0 +1,42 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: school_project
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://localhost/test_demo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+      multipart:
+        max-file-size: 100MB       # 单个文件最大100MB
+        max-request-size: 100MB    # 整个请求最大100MB
+  config:
+    import:
+      - classpath:satoken_config.yml
+      - classpath:swagger-config.yml
+      - classpath:email_config.yml
+      - classpath:quartz-config.yml
+      - classpath:cache-config.yml
+      - classpath:langchain-config.yml
+      - classpath:chatAI_config.yml
+file:
+  path: "D:/images/"
+  url-prefix: "/images/"
+sa:
+  token:
+    whitelist:
+      paths:
+        - /api/user/info
+        - /api/common/upload
+        - /api/test
+        - /book/**
+        - /email/sendEmail
+        - /images/**
+    blacklist:
+      paths:
+        - /api/admin/delete

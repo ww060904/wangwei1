@@ -1,0 +1,7 @@
+spring:
+  quartz:
+    job-store-type: jdbc #使用数据库的形式进行定时任务持久存储，默认支持mysql数据库
+    jdbc:
+      initialize-schema: always #自动生成定时任务表。
+# 注意自动生成任务表，每次启动程序时都会重新创建。适合固定的定时任务。如果有自定义任务的情况，建议先always自动创建表后，再修改为never自己创建表形式。
+#建议开发环境使用always 实际环境采用never
